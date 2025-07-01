@@ -29,7 +29,7 @@ namespace StationTest.Controllers
 
             foreach (var stat in stations) {
 
-                stat.Auth = "Mina";
+                stat.Auth = "Mohamedlink";
 
             }
 
