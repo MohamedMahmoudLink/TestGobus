@@ -1,0 +1,175 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "StationTest",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/stations": {
+      "get": {
+        "tags": [
+          "GoBus"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Station"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Station"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Station"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Station": {
+        "type": "object",
+        "properties": {
+          "stationID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tripRegion_Code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tripOffice_Code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "officeNameA": {
+            "type": "string",
+            "nullable": true
+          },
+          "officeNameE": {
+            "type": "string",
+            "nullable": true
+          },
+          "officeAddressAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "officeAddressEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "officeTel": {
+            "type": "string",
+            "nullable": true
+          },
+          "tripRegion_Order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tripRegion_NameA": {
+            "type": "string",
+            "nullable": true
+          },
+          "tripRegion_NameE": {
+            "type": "string",
+            "nullable": true
+          },
+          "latitude": {
+            "type": "string",
+            "nullable": true
+          },
+          "longitude": {
+            "type": "string",
+            "nullable": true
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
