@@ -10,6 +10,7 @@ namespace StationTest.Data
             : base(options)
         {
         }
+        
                         public DbSet<Station> Station { get; set; }
 
     }

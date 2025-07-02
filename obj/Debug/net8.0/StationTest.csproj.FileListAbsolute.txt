@@ -137,7 +137,6 @@ C:\Users\HQ-LAP-MedhatAgyeeb\Desktop\TEST\StationTest\StationTest\obj\Debug\net8
 C:\Users\HQ-LAP-MedhatAgyeeb\Desktop\TEST\StationTest\StationTest\obj\Debug\net8.0\StationTest.genruntimeconfig.cache
 C:\Users\HQ-LAP-MedhatAgyeeb\Desktop\TEST\StationTest\StationTest\obj\Debug\net8.0\ref\StationTest.dll
 C:\Users\HQ-LAP-MedhatAgyeeb\Desktop\TEST\StationTest\StationTest\obj\Debug\net8.0\StationTest.sourcelink.json
-C:\Users\HQ-LAP-MedhatAgyeeb\Desktop\TEST\StationTest\StationTest\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\HQ-LAP-MedhatAgyeeb\Desktop\TEST\StationTest\StationTest\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\HQ-LAP-MedhatAgyeeb\Desktop\TEST\StationTest\StationTest\bin\Debug\net8.0\MySqlConnector.dll
 C:\Users\HQ-LAP-MedhatAgyeeb\Desktop\TEST\StationTest\StationTest\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll

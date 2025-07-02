@@ -8,6 +8,9 @@ public class MySqlDbContext : DbContext
 
     public DbSet<areas> areas { get; set; }
 
+        public DbSet<Passenger> Passenger { get; set; }
+
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<areas>(entity =>
@@ -15,6 +18,14 @@ public class MySqlDbContext : DbContext
             entity.ToTable("areas", "gomini");
             entity.HasKey(e => e.IDArea); 
         });
+
+            modelBuilder.Entity<Passenger>(entity =>
+    {
+        entity.ToTable("passengers", "gomini");
+        entity.HasKey(e => e.IDPassenger);
+    });
+
+
     }
 
 }

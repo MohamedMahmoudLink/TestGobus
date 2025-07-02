@@ -48,5 +48,21 @@ namespace StationTest.Controllers
             var areas = await _context1.areas.ToListAsync();
             return Ok(areas);
         }
+
+
+        [HttpGet]
+[Route("api/Mysql/GetPassengersByName")]
+public async Task<IActionResult> GetPassengersByName(string name)
+{
+
+    if (string.IsNullOrWhiteSpace(name))
+        return BadRequest("Name is required");
+
+    var passengers = await _context1.Passenger.Where(p => p.PassengerFullName.StartsWith(name))
+        .ToListAsync();
+
+    return Ok(passengers);
+}
+
     }
 }
