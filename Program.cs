@@ -23,7 +23,7 @@ builder.Services.AddDbContext<MySqlDbContext>(options =>
         ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("MySqlConnection"))
     ));
 
-//builder.WebHost.UseUrls("http://*:5000");
+builder.WebHost.UseUrls("http://*:5000");
 
 var app = builder.Build();
 
