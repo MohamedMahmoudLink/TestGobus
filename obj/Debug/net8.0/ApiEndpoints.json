@@ -1,8 +1,18 @@
 [
   {
     "ContainingType": "StationTest.Controllers.GoBusController",
+    "Method": "GetAreas",
+    "RelativePath": "api/Mysql/GetAreas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StationTest.Controllers.GoBusController",
     "Method": "GetStations",
-    "RelativePath": "api/stations",
+    "RelativePath": "api/Stations",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

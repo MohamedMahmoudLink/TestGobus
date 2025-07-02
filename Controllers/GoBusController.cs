@@ -7,20 +7,24 @@ namespace StationTest.Controllers
 
 
 
-    [Route("api/stations")]
+ 
     [ApiController]
     public class GoBusController : Controller
     {
 
         private readonly ApplicationDbContext _context;
-
-        public GoBusController(ApplicationDbContext context)
+        private readonly MySqlDbContext _context1;
+        public GoBusController(ApplicationDbContext context, MySqlDbContext context1)
         {
             _context = context;
+            _context1 = context1;
+
         }
 
 
         [HttpGet]
+                          [Route("api/Stations")]
+
         public async Task<ActionResult<IEnumerable<Station>>> GetStations()
         {
             var stations = await _context.Station
@@ -34,6 +38,15 @@ namespace StationTest.Controllers
             }
 
             return Ok(stations);
+        }
+
+
+        [HttpGet]
+              [Route("api/Mysql/GetAreas")]
+        public async Task<IActionResult> GetAreas()
+        {
+            var areas = await _context1.areas.ToListAsync();
+            return Ok(areas);
         }
     }
 }

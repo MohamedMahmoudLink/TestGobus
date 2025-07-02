@@ -34,7 +34,7 @@ namespace StationTest.Models
 
         public string? Longitude { get; set; }
 
-        [NotMapped]
+       [NotMapped]
         public string? Auth { get; set; }
     }
   

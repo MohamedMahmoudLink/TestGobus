@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/stations": {
+    "/api/Stations": {
       "get": {
         "tags": [
           "GoBus"
@@ -39,6 +39,18 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/Mysql/GetAreas": {
+      "get": {
+        "tags": [
+          "GoBus"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -140,7 +152,7 @@
             "type": "string",
             "nullable": true
           },
-          "token": {
+          "auth": {
             "type": "string",
             "nullable": true
           }

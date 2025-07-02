@@ -10,11 +10,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
+
+
+//connection
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.WebHost.UseUrls("http://*:5000");
+builder.Services.AddDbContext<MySqlDbContext>(options =>
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("MySqlConnection"),
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("MySqlConnection"))
+    ));
+
+//builder.WebHost.UseUrls("http://*:5000");
 
 var app = builder.Build();
 
