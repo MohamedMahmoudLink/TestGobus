@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HQ-LAP-MedhatAgyeeb\\Desktop\\TEST\\StationTest\\StationTest\\StationTest.csproj": {}
+    "C:\\Users\\HQ-LAP-MedhatAgyeeb\\Desktop\\Work\\TEST\\StationTest\\StationTest\\StationTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HQ-LAP-MedhatAgyeeb\\Desktop\\TEST\\StationTest\\StationTest\\StationTest.csproj": {
+    "C:\\Users\\HQ-LAP-MedhatAgyeeb\\Desktop\\Work\\TEST\\StationTest\\StationTest\\StationTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HQ-LAP-MedhatAgyeeb\\Desktop\\TEST\\StationTest\\StationTest\\StationTest.csproj",
+        "projectUniqueName": "C:\\Users\\HQ-LAP-MedhatAgyeeb\\Desktop\\Work\\TEST\\StationTest\\StationTest\\StationTest.csproj",
         "projectName": "StationTest",
-        "projectPath": "C:\\Users\\HQ-LAP-MedhatAgyeeb\\Desktop\\TEST\\StationTest\\StationTest\\StationTest.csproj",
+        "projectPath": "C:\\Users\\HQ-LAP-MedhatAgyeeb\\Desktop\\Work\\TEST\\StationTest\\StationTest\\StationTest.csproj",
         "packagesPath": "C:\\Users\\HQ-LAP-MedhatAgyeeb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HQ-LAP-MedhatAgyeeb\\Desktop\\TEST\\StationTest\\StationTest\\obj\\",
+        "outputPath": "C:\\Users\\HQ-LAP-MedhatAgyeeb\\Desktop\\Work\\TEST\\StationTest\\StationTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Core": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.13, )"

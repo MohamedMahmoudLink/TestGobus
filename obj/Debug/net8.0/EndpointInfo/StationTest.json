@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Stations": {
+    "/api/GoBus": {
       "get": {
         "tags": [
           "GoBus"
@@ -43,7 +43,40 @@
         }
       }
     },
-    "/api/Mysql/GetAreas": {
+    "/api/GoBus/Mysql/GetAreas": {
+      "get": {
+        "tags": [
+          "GoBus"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/GoBus/GetPassengersByName": {
+      "get": {
+        "tags": [
+          "GoBus"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/GoBus/HelloWorld": {
       "get": {
         "tags": [
           "GoBus"

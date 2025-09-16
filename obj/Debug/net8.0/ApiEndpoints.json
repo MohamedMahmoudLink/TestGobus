@@ -1,18 +1,8 @@
 [
   {
     "ContainingType": "StationTest.Controllers.GoBusController",
-    "Method": "GetAreas",
-    "RelativePath": "api/Mysql/GetAreas",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "StationTest.Controllers.GoBusController",
     "Method": "GetStations",
-    "RelativePath": "api/Stations",
+    "RelativePath": "api/GoBus",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -28,6 +18,42 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "StationTest.Controllers.GoBusController",
+    "Method": "GetPassengersByName",
+    "RelativePath": "api/GoBus/GetPassengersByName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StationTest.Controllers.GoBusController",
+    "Method": "HelloWorld",
+    "RelativePath": "api/GoBus/HelloWorld",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StationTest.Controllers.GoBusController",
+    "Method": "GetAreas",
+    "RelativePath": "api/GoBus/Mysql/GetAreas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "StationTest.Controllers.WeatherForecastController",

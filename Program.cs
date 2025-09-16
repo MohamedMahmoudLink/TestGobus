@@ -1,9 +1,21 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using StationTest.Data;
-
+using StationTest.Hubs;
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy
+            .WithOrigins("http://127.0.0.1:5500") // عنوان الفرونت إند
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials(); // SignalR يحتاجها
+    });
+});
 // Add services to the container.
+builder.Services.AddSignalR();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -27,9 +39,11 @@ builder.WebHost.UseUrls("http://*:5000");
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+app.MapHub<PassengerHub>("/passengerHub");
 
-    app.UseSwagger();
+app.UseCors("AllowFrontend");
+
+app.UseSwagger();
     app.UseSwaggerUI();
 
 
